@@ -3,7 +3,12 @@ import './NewsArticle.css';
 
 const NewsArticle = () => {
   return (
-    <h1>Meow meow</h1>
+    <div ClassName='article'>
+      <img></img>
+      <h3>Headline Goes Here</h3>
+      <p>Description of Article goes here</p>
+      <button>This is the buttons</button>
+    </div>
   )
 }
 
