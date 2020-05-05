@@ -1,6 +1,10 @@
 import React from 'react';
 import './NewsArticle.css';
 
-// NEWSARTICLE COMPONENT CODE GOES HERE
+const NewsArticle = () => {
+  return (
+    <h1>Meow meow</h1>
+  )
+}
 
 export default NewsArticle;
