@@ -3,9 +3,16 @@ import './NewsContainer.css'
 import NewsArticle from '../NewsArticle/NewsArticle'
 
 const NewsContainer = (props) => {
-  console.log(props);
+  const {entertainment, health, local, science, technology} = props
+
   return (
-    <NewsArticle />
+    <div ClassName='news-container'>
+      <NewsArticle entertainment={entertainment}/>
+      <NewsArticle health={health}/>
+      <NewsArticle local={local}/>
+      <NewsArticle science={science}/>
+      <NewsArticle technology={technology}/>
+    </div>
   )
 }
 
