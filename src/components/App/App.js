@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
+import entertainment from '../../data/entertainment';
+import health from '../../data/health';
 import local from '../../data/local';
+import science from '../../data/science';
+import technology from '../../data/technology';
+import NewsContainer from '../NewsContainer/NewsContainer'
 import './App.css';
 
 class App extends Component {
@@ -13,7 +18,13 @@ class App extends Component {
   render () {
     return (
       <div className="app">
-        YOUR CODE GOES HERE!
+        <NewsContainer
+          entertainment={entertainment}
+          health={health}
+          local={local}
+          science={science}
+          technology={technology}
+        />
       </div>
     );
   }
