@@ -13,21 +13,21 @@ class App extends Component {
     super();
     this.state = {
       allTopics: {local, entertainment, health, science, technology},
-      searchTerm: '',
-      selected: 'local'
+      selected: 'local',
+      results: []
     }
-  }
-
-  setSearchedTerm = (term) => {
-    this.setState({
-      searchTerm : term
-    })
   }
 
   changeSelected = (event) => {
     this.setState({
       selected: event.target.id
     })
+    this.setState({results : []})
+  }
+
+  getSearchedArticles = (value) => {
+    let results = this.state.allTopics[this.state.selected].filter(topic => topic.headline.includes(value));
+    this.setState({results: results})
   }
 
   render () {
@@ -39,7 +39,8 @@ class App extends Component {
         />
         <NewsContainer
             articlesData={this.state.allTopics[this.state.selected]}
-            setSearchedTerm={this.setSearchedTerm}
+            results={this.state.results}
+            getSearchedArticles={this.getSearchedArticles}
         />
       </main>
     );

@@ -3,11 +3,16 @@ import NewsArticle from '../NewsArticle/NewsArticle'
 import './ArticleContainer.css'
 
 const ArticleContainer = (props) => {
+var array = props.articlesData
 
-const selectedArticles = props.articlesData.map(article => {
+if (props.results.length) {
+  array = props.results
+}
+
+const selectedArticles = array.map(article => {
     return <NewsArticle id={article.id} info={article}/>
   })
-
+  
   return (
     <div className='article-container'>
       {selectedArticles}
