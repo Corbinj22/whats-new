@@ -1,13 +1,13 @@
 import React from 'react';
 import './NewsArticle.css';
 
-const NewsArticle = () => {
+const NewsArticle = (props) => {
   return (
-    <div ClassName='article'>
-      <img ClassName='article-img'></img>
-      <h3 ClassName='article-header'>Headline Goes Here</h3>
-      <p ClassName='article-description'>Description of Article goes here</p>
-      <button ClassName='article-webSearch-button'>This is the buttons</button>
+    <div className='article'>
+      <img className='article-img' src={props.info.img}></img>
+      <h3 className='article-header'>{props.info.headline}</h3>
+      <p className='article-description'>{props.info.description}</p>
+      <a href={props.info.url}>Link To Article</a>
     </div>
   )
 }

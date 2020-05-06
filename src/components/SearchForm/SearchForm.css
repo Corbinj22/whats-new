@@ -1,0 +1,21 @@
+.article-search-form {
+  display: flex;
+  width: 100%;
+  height:10%;
+  background-color: #000000;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-search-input {
+  height:40%;
+  width:50%;
+  padding: 1em;
+}
+
+.article-search-btn {
+  height: 40%;
+  width: 10%;
+  margin: .5em;
+  color: white;
+}
