@@ -3,9 +3,10 @@
   flex-direction: column;
   background-color: white;
   overflow: scroll;
-  width:20%;
-  height:40%;
+  width: 25%;
+  height: 65%;
   margin: 2em;
+  padding: .3em;
 }
 
 .article-img {

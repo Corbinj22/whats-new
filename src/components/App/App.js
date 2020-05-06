@@ -12,8 +12,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      allTopics: [entertainment, health, local, science, technology]
+      allTopics: {entertainment, health, local, science, technology},
+      searchTerm: ''
     }
+  }
+
+  setSearchedTerm = (term) => {
+    this.setState({
+      searchTerm : term
+    })
   }
 
   render () {
@@ -22,6 +29,7 @@ class App extends Component {
         <Menu />
         <NewsContainer
           articlesData={this.state.allTopics}
+          setSearchedTerm={this.setSearchedTerm}
         />
       </main>
     );

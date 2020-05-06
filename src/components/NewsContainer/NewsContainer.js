@@ -3,11 +3,11 @@ import './NewsContainer.css'
 import ArticleContainer from '../ArticleContainer/ArticleContainer'
 import SearchForm from '../SearchForm/SearchForm'
 
-const NewsContainer = ({ articlesData }) => {
+const NewsContainer = ({ articlesData, setSearchedTerm }) => {
 
   return (
     <div className='news-container'>
-      <SearchForm />
+      <SearchForm setSearchedTerm={setSearchedTerm}/>
       <ArticleContainer articlesData={articlesData}/>
     </div>
   )
