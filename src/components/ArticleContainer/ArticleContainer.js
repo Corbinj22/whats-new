@@ -3,15 +3,19 @@ import NewsArticle from '../NewsArticle/NewsArticle'
 import './ArticleContainer.css'
 
 const ArticleContainer = (props) => {
-  const allArticles = props.articlesData.map(newsTopic => {
-    return newsTopic.map(article => {
-      return <NewsArticle id={article.description} info={article}/>
-    })
-  })
+var array = props.articlesData
 
+if (props.results.length) {
+  array = props.results
+}
+
+const selectedArticles = array.map(article => {
+    return <NewsArticle id={article.id} info={article}/>
+  })
+  
   return (
     <div className='article-container'>
-      {allArticles}
+      {selectedArticles}
     </div>
   )
 }
