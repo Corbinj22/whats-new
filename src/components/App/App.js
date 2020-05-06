@@ -12,8 +12,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      allTopics: {entertainment, health, local, science, technology},
-      searchTerm: ''
+      allTopics: {local, entertainment, health, science, technology},
+      searchTerm: '',
+      selected: 'local'
     }
   }
 
@@ -23,13 +24,22 @@ class App extends Component {
     })
   }
 
+  changeSelected = (event) => {
+    this.setState({
+      selected: event.target.id
+    })
+  }
+
   render () {
     return (
       <main className="app">
-        <Menu />
-        <NewsContainer
+        <Menu
           articlesData={this.state.allTopics}
-          setSearchedTerm={this.setSearchedTerm}
+          changeSelected={this.changeSelected}
+        />
+        <NewsContainer
+            articlesData={this.state.allTopics[this.state.selected]}
+            setSearchedTerm={this.setSearchedTerm}
         />
       </main>
     );

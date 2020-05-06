@@ -1,4 +1,6 @@
 .nav-container {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width:20%;
   background-color: #F1DBFF;
@@ -6,7 +8,13 @@
 }
 
 .nav-icon {
+  width: 100%;
+  margin: .5em;
   padding: 1em;
   font-size: 15px;
   font-weight: bold;
+}
+
+.nav-icon:focus {
+  background-color: #689c69;
 }

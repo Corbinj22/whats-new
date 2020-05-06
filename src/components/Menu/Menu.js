@@ -1,15 +1,16 @@
 import React from 'react';
 import './Menu.css'
 
-const Menu = () => {
+const Menu = (props) => {
+  let articleTitles = Object.keys(props.articlesData)
+  let articleTopics = articleTitles.map(article => {
+    return <button onClick={props.changeSelected} autofocus='true' className='nav-icon' id={article} key={article}>{article}</button>
+  })
   return (
     <div className='nav-container'>
       <h2>Whats New?</h2>
       <div>
-        <p className='nav-icon local-news'>Local News</p>
-        <p className='nav-icon technology'>technology</p>
-        <p className='nav-icon entertainment'>entertainment</p>
-        <p className='nav-icon health'>health</p>
+        {articleTopics}
       </div>
     </div>
   )
