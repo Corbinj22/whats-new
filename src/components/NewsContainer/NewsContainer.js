@@ -1,17 +1,14 @@
 import React from 'react';
 import './NewsContainer.css'
-import NewsArticle from '../NewsArticle/NewsArticle'
+import ArticleContainer from '../ArticleContainer/ArticleContainer'
+import SearchForm from '../SearchForm/SearchForm'
 
-const NewsContainer = (props) => {
-  const {entertainment, health, local, science, technology} = props
+const NewsContainer = ({ articlesData }) => {
 
   return (
-    <div ClassName='news-container'>
-      <NewsArticle entertainment={entertainment}/>
-      <NewsArticle health={health}/>
-      <NewsArticle local={local}/>
-      <NewsArticle science={science}/>
-      <NewsArticle technology={technology}/>
+    <div className='news-container'>
+      <SearchForm />
+      <ArticleContainer articlesData={articlesData}/>
     </div>
   )
 }

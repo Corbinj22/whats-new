@@ -1,1 +1,13 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow: scroll;
+  width:20%;
+  height:40%;
+  margin: 2em;
+}
 
+.article-img {
+  width: 100%;
+}
