@@ -5,7 +5,7 @@ import './ArticleContainer.css'
 const ArticleContainer = (props) => {
   const allArticles = props.articlesData.map(newsTopic => {
     return newsTopic.map(article => {
-      return <NewsArticle info={article}/>
+      return <NewsArticle id={article.description} info={article}/>
     })
   })
 
