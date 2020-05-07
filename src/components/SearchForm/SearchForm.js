@@ -18,6 +18,9 @@ class SearchForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.getSearchedArticles(this.state.value)
+    this.setState({
+      value : ''
+    })
   }
 
   render() {
