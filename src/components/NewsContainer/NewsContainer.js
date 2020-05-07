@@ -7,9 +7,8 @@ const NewsContainer = ({ articlesData, setSearchedTerm, getSearchedArticles, res
   return (
     <div className='news-container'>
       <SearchForm
-        setSearchedTerm={setSearchedTerm}
         getSearchedArticles={getSearchedArticles}
-        />
+      />
 
       <ArticleContainer
         articlesData={articlesData}
