@@ -23,7 +23,7 @@ class SearchForm extends React.Component {
   render() {
     return (
       <form className='article-search-form'>
-        <input className='article-search-input' onChange={this.handleChange} placeholder='Search Available Articles' value={this.state.value} type='text'></input>
+        <input className='article-search-input' onChange={this.handleChange} placeholder='Search' value={this.state.value} type='text'></input>
         <button className='article-search-btn' onClick={this.handleSubmit} disabled={!this.state.value.length}>Search Now</button>
       </form>
     )
