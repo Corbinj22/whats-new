@@ -33,7 +33,7 @@
 
 * React
 * Webpack
-* Sass (SCSS)
+* CSS
 
 
 ## Learning Goals:
