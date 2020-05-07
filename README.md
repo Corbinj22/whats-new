@@ -23,6 +23,11 @@
 
 5. In your terminal, run `npm start` and then navigate to `http://localhost:8080/` in your browser.
 
+## Usage
+
+1. Users are able to select a specific article topic using the menu on the left side of the application
+2. After selecting an article topic, users are able to search by topic headline using the search input at the top of the app. 
+
 
 ## Technologies Used
 
