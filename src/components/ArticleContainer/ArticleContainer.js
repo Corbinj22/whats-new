@@ -10,7 +10,7 @@ if (props.results.length) {
 }
 
 const selectedArticles = array.map(article => {
-    return <NewsArticle info={article} key={article.id.toString()}/>
+    return <NewsArticle id={article.id} info={article} key={article.id.toString()}/>
   })
 
   return (

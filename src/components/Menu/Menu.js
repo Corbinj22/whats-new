@@ -4,7 +4,7 @@ import './Menu.css'
 const Menu = (props) => {
   let articleTitles = Object.keys(props.articlesData)
   let articleTopics = articleTitles.map(article => {
-    return <button onClick={props.changeSelected} autoFocus={true} className='nav-icon' id={article.headline} key={article}>{article}</button>
+    return <button onClick={props.changeSelected} autoFocus={true} className='nav-icon' id={article} key={article}>{article}</button>
   })
   return (
     <div className='nav-container'>
