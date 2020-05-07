@@ -10,7 +10,6 @@ describe(SearchForm, () => {
     const searchForm = render(<SearchForm getSearchedArticles={mockSearch}/>)
   })
 
-  //should take input
   it('should be able to display a user input', () => {
     const { getByPlaceholderText } = render(<SearchForm getSearchedArticles={mockSearch}/>)
     const searchInput = getByPlaceholderText('Search')
@@ -32,8 +31,5 @@ describe(SearchForm, () => {
     fireEvent.click(searchButton)
     expect(mockSearch).toHaveBeenCalledWith(searchInput.value)
   })
-
-
-
 
 })
