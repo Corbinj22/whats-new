@@ -1,4 +1,4 @@
-# Overlook
+# What New?
 
 
 ## Abstract
@@ -27,6 +27,10 @@
 
 1. Users are able to select a specific article topic using the menu on the left side of the application
 2. After selecting an article topic, users are able to search by topic headline using the search input at the top of the app. 
+
+## Image
+
+![Screen Shot 2020-05-07 at 7 51 51 PM](https://user-images.githubusercontent.com/55507491/81362443-2482b600-909e-11ea-8f72-f292cd0e250e.png)
 
 
 ## Technologies Used
